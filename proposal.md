@@ -17,4 +17,4 @@
 
 * Mock up for the page layout
 
-[!]
+![Layout](https://github.com/Matthewlgrimes94/CAT-Solutions/blob/master/images/layout.jpg)
