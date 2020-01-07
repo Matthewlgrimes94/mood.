@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello!!!</title>
+</head>
+<body>
+     <p>Change to Mood Picker/Spotify Playlist thing</p>
+
+     <div>
+       <label>
+         <input type="checkbox" name="Non-Alcoholic" id="alcCheck">
+        Non-Alcoholic
+       </label>
+     </div>
+     <div>
+      <label>
+        Search for drink:
+        <input type="text" id="drinkSearch">
+      </label>
+    </div>
+    <button id='run'>RUN</button>
+
+     <!-- <div>
+        <label>
+          <input type="number" id="queryLength" min="1" max="10" value="3">
+         Number of results
+        </label>
+      </div> -->
+
+      <div id="allDrinks"></div>
+      
+
+      <button class ='eraButton' id='2040'>20s-40s</button>
+      <button class ='eraButton' id='5070'>50s-70s</button>
+      <button class ='eraButton' id='802000'>80s-2000s</button>
+      <button class ='eraButton' id='present'>Present</button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="assets/js/cocktailsApi.js"></script>
+</body>
+</html>
+
