@@ -1,7 +1,14 @@
-.colorize {
-    cursor: pointer !important;
-    background-color: white !important;
-    color: #50358f !important;  
+html {
+    font-family: 'Abril Fatface', cursive;;
 }
 
+.era {
+    cursor: pointer;
+}
+
+.logo {
+    margin-top: 2%;
+    height: 40%;
+    width: auto;
+}
 
