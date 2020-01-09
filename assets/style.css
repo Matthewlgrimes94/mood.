@@ -1,14 +1,23 @@
-html {
-    font-family: 'Abril Fatface', cursive;;
+h2 {
+    font-family: 'Abril Fatface', cursive;
 }
 
 .era {
     cursor: pointer;
+    transition: 1s;
+}
+
+.era:hover {
+    transition: ease 0.5s;
+    transform: translateY(-5px);
 }
 
 .logo {
     margin-top: 2%;
-    height: 40%;
+    height: 50%;
     width: auto;
 }
 
+.eraIcon {
+    border: solid 2px black;
+}
