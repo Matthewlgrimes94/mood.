@@ -28,7 +28,7 @@ h2 {
 
 .eraIconDark {
     border: solid 2px black;
-    background-color: rgb(255, 255, 255, .5);
+    background-color: rgb(255, 255, 255, .8);
     transition: 1s;
 }
 
@@ -40,7 +40,6 @@ h2 {
 .accordion-title {
     font-family: 'Abril Fatface', cursive;
     font-size: 2rem;
-    color: black !important
 }
 .media-object-section {
     font-size: 1.5rem;
@@ -70,18 +69,24 @@ label{
 
 .eraIconLight {
     border: solid 2px white;
-    background-color: rgba(70, 70, 70, .5);
+    background-color: rgba(70, 70, 70, .8);
     transition: 1s;
 }
 
 .dark {
-    color: black;
+    color: black !important;
     transition: 1s;
+}
+.dark a {
+    color: black !important;
 }
 
 .light {
-    color: white;
+    color: white !important;
     transition: 1s;
+}
+.light a {
+    color: white !important;
 }
 
 #background-holder {
@@ -91,25 +96,25 @@ label{
 .e2040 {
     background: url('../images/20sbackground.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
+    
 }
 
 .e5070 {
     background: url('../images/1970sbackground.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
+    
 }
 
 .e802000 {
     background: url('../images/90sbackground.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
+   
 }
 
 .present {
     background: url('../images/presentbackground.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
+   
 }
 
 #player {
