@@ -16,22 +16,30 @@
 
 <body>
   <div class="grid-container">
-    <div class="grid-x grid-padding-x">
+    <div class="grid-x grid-margin-x">
       <div class="large-12 cell text-center">
-        <img src="assets/Artboard 1-80.jpg" class="logo"/> 
+        <img src="images/mood..jpg" class="logo"/> 
       </div>
     </div>
-    <br>
-    <br>
-    <div class="grid-x grid-margin-x"></div>
-    <ul class="accordion drink-content" data-accordion data-allow-all-closed="true">
+    <div class="grid-x grid-margin-x text-center eras">
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="2040">20's-40's</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="5070">50's-70's</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="802000">80's-2000</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="present">Present</h2></div>
     </div>
-    
+    <ul class="accordion drink-content text-center" data-accordion data-allow-all-closed="true">
+  </div>
+  <div class=“reveal” id=“modal” data-reveal>
+    <h2>Your drink was not found.</h2>
+    <p class=“lead”>Sorry!</p>
+    <button class=“close-button” data-close aria-label=“Close modal” type=“button”>
+      <span aria-hidden=“true”>&times;</span>
+    </button>
+  </div>
 
     <!-- Compressed JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
-   <!-- <script src="assets/js/cocktailsApi.js"></script> -->
     <script src="assets/js/cocktailsApi.js"></script>
     <!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
     <!-- <script src="assets/js/soundcloud.js"></script> -->
