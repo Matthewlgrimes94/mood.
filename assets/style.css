@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 h2 {
     font-family: 'Abril Fatface', cursive;
 }
@@ -6,19 +10,68 @@ h2 {
     cursor: pointer;
 }
 
-.eraIcon:hover {
+.eras {
+    margin-top: 4%;
+}
+
+#allDrinks {
+    margin-top: 40%;
+}
+
+.hover:hover {
     transition: ease 0.5s;
     transform: translateY(-5px);
     box-shadow: 10px, 5px, 5px, black !important;
 }
 
 .logo {
-    margin-top: 2%;
+    margin-top: 12%;
     height: 50%;
     width: auto;
 }
 
-.eraIcon {
+.eraIconDark {
     border: solid 2px black;
+    background-color: rgb(255, 255, 255, .5);
     transition: 1s;
+}
+
+.eraIconLight {
+    border: solid 2px white;
+    background-color: rgba(70, 70, 70, .5);
+    transition: 1s;
+}
+
+.dark {
+    color: black;
+    transition: 1s;
+}
+
+.light {
+    color: white;
+    transition: 1s;
+}
+
+#background-holder {
+    height: 100vh;
+}
+
+.e2040 {
+    background: url('../images/20sbackground.jpg');
+    background-size: 100%;
+}
+
+.e5070 {
+    background: url('../images/1970sbackground.jpg');
+    background-size: 100%;
+}
+
+.e802000 {
+    background: url('../images/90sbackground.jpg');
+    background-size: 100%;
+}
+
+.present {
+    background: url('../images/presentbackground.jpg');
+    background-size: 100%;
 }

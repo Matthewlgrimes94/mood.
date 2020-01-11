@@ -85,7 +85,6 @@ let apiCallId = function (drinkId) {
         url: queryURLTwo,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         //declare specific response values
         let drinkName = response.drinks[0].strDrink
         let drinkImage = response.drinks[0].strDrinkThumb
