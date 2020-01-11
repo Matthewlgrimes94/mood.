@@ -47,6 +47,7 @@ h2 {
     transition: 1s;
 }
 
+
 .light {
     color: white;
     transition: 1s;
@@ -75,3 +76,9 @@ h2 {
     background: url('../images/presentbackground.jpg');
     background-size: 100%;
 }
+
+#player {
+    width: 15%;
+    margin-top:5px;
+}
+
