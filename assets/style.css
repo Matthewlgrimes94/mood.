@@ -4,12 +4,12 @@ h2 {
 
 .era {
     cursor: pointer;
-    transition: 1s;
 }
 
-.era:hover {
+.eraIcon:hover {
     transition: ease 0.5s;
     transform: translateY(-5px);
+    box-shadow: 10px, 5px, 5px, black !important;
 }
 
 .logo {
@@ -20,4 +20,5 @@ h2 {
 
 .eraIcon {
     border: solid 2px black;
+    transition: 1s;
 }
