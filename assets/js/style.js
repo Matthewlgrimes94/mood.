@@ -38,7 +38,7 @@ erasEl.on('click', '.eraButton', function(){
 });
 
 function lightMode () {
-    logo.attr('src','../images/mood.white.png');
+    logo.attr('src','../images/moodwhite.png');
     era1.removeClass('eraIconDark');
     era1.addClass('eraIconLight');
     era1Text.addClass('light');
@@ -65,7 +65,7 @@ function lightMode () {
 }
 
 function darkMode () {
-    logo.attr('src','../images/mood..png');
+    logo.attr('src','../images/mood.png');
     era1.removeClass('eraIconLight');
     era1.addClass('eraIconDark');
     era1Text.addClass('dark');

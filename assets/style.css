@@ -91,21 +91,25 @@ label{
 .e2040 {
     background: url('../images/20sbackground.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .e5070 {
     background: url('../images/1970sbackground.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .e802000 {
     background: url('../images/90sbackground.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .present {
     background: url('../images/presentbackground.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #player {
