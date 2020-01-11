@@ -23,10 +23,31 @@
     </div>
     <br>
     <br>
+   <div class="reveal" id="modal" data-reveal>
+    <h2>Your drink was not found.</h2>
+    <p class="lead">Sorry!</p>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+    <button class ='eraButton' id='2040'>20s-40s</button>
+    <button class ='eraButton' id='5070'>50s-70s</button>
+    <button class ='eraButton' id='802000'>80s-2000s</button>
+    <button class ='eraButton' id='present'>Present</button>
+
     <div class="grid-x grid-margin-x"></div>
-    <ul class="accordion drink-content" data-accordion data-allow-all-closed="true">
+
+    
+    <ul class="accordion drink-content" id="allDrinks" data-accordion data-allow-all-closed="true">
+    </ul>
     </div>
     
+
+
+
+
+
+
 
     <!-- Compressed JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

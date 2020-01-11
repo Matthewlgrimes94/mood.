@@ -1,14 +1,14 @@
-$(document).foundation();
+$(document).foundation()
 
 //////////////////////
 // Element Selectors//
 //////////////////////
 let alcCheckEl = $('#alcCheck')
-let runEl = $('#run')
+let runEl;
 let queryLengthEl = $('#queryLength')
 let allDrinksEl = $('#allDrinks')
 let eraButtonsEl = $('.eraButton')
-
+let modal = $('#modal');
 ////////////////
 // API Queries//
 ////////////////
@@ -47,11 +47,7 @@ eraButtonsEl.click(function () {
             }
         }
     }
-})
-
-runEl.click(function (){
-    drinkSearch = $('#drinkSearch').val()
-    apiCall(drinkSearch)
+    searchGen()
 })
 
 alcCheckEl.click(function (){
@@ -75,7 +71,9 @@ let apiCall = function (query) {
         let id = response.drinks[0].idDrink
         //Call api with ids from above response
         apiCallId(id)
-    })      
+    }).fail(function(){
+        modal.foundation('open');
+    });
 }
 
 //Call individual drinks
@@ -108,23 +106,8 @@ let apiCallId = function (drinkId) {
             {ing: response.drinks[0].strIngredient15, amt: response.drinks[0].strMeasure15},
         ]
 
-        //create html elements for each response
-        let newDrink = $('<div>');
-        let drinkNameEl = $('<h3>')
-        let drinkImageEl = $('<img>')
-        let drinkInstEl = $('<p>')
-        let ingList = $('<ul>')
-        //set element values
-        drinkNameEl.text(drinkName);
-        drinkImageEl.attr("src", `${drinkImage}`)
-        drinkInstEl.text(drinkInstructions)
-        //append elements
-        allDrinksEl.prepend(newDrink);
-        newDrink.append(drinkNameEl)
-        newDrink.append(drinkImageEl)
-        newDrink.append(ingList)
-        newDrink.append(drinkInstEl)
-        //for loop to create HTML for each ingredient listed in response.
+        var ingList = $('<ul>');
+
         for (var i=0; i<ingredients.length; i++) {
             if (ingredients[i].ing !== null) {
                 let newIng = $('<li>')
@@ -135,5 +118,69 @@ let apiCallId = function (drinkId) {
                 ingList.append(newIng)
             }
         }
-    })       
+
+
+        let accordionHTML = $(`<li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">${drinkName}</a>
+        <div class="accordion-content" data-tab-content>
+          <div class="media-object">
+            <div class="media-object-section">
+              <img src= "${drinkImage}" alt="">
+            </div>
+            <div class="media-object-section">
+              <h4>${drinkName}</h4>
+              <p>${drinkInstructions}</p>
+              <ul>${ingList.html()}</ul>
+            </div>
+          </div>
+        </div>`)
+
+        allDrinksEl.prepend(accordionHTML)
+        Foundation.reInit('accordion');
+    })
+}
+
+let searchGen = function () {
+    let searchHTML = $(`<li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">Is your favorite drink missing? Search it Here!</a>
+        <div class="accordion-content" data-tab-content>
+          <div class="media-object">
+            <div class="media-object-section">
+                <div>
+                    <label>
+                    <input type="checkbox" name="Non-Alcoholic" id="alcCheck">
+                    Non-Alcoholic
+                    </label>                  
+                </div>
+            </div>
+            <div class="media-object-section">
+                <form>
+                    <label>
+                    Search for drink:
+                    <input type="text" id="drinkSearch">
+                    <button type="submit" id='run'>Search Drink</button>
+                    </label>
+                </form>
+            </div>
+          </div>
+        </div>`)
+
+        allDrinksEl.append(searchHTML)
+        runEl = $('#run')    
+        runEl.click(function (event){
+            event.preventDefault()
+            drinkSearch = $('#drinkSearch').val()        
+            if (!drinkSearch) return
+            else apiCall(drinkSearch)
+        })
+}
+
+let runFunc = function (event) {
+    event.preventDefault()
+    drinkSearch = $('#drinkSearch').val()
+    console.log(drinkSearch)
+
+    if (!drinkSearch) return
+    else apiCall(drinkSearch)
+
 }
