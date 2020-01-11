@@ -27,3 +27,7 @@ h2 {
     width: 15%;
     margin-top:5px;
 }
+
+.player-button:hover {
+    cursor: pointer;
+}
