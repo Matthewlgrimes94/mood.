@@ -66,7 +66,6 @@ let apiCall = function (query) {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        // console.log(response)
         //declare ID to pass into api call by ID
         let id = response.drinks[0].idDrink
         //Call api with ids from above response
@@ -83,7 +82,6 @@ let apiCallId = function (drinkId) {
         url: queryURLTwo,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         //declare specific response values
         let drinkName = response.drinks[0].strDrink
         let drinkImage = response.drinks[0].strDrinkThumb
@@ -178,8 +176,6 @@ let searchGen = function () {
 let runFunc = function (event) {
     event.preventDefault()
     drinkSearch = $('#drinkSearch').val()
-    console.log(drinkSearch)
-
     if (!drinkSearch) return
     else apiCall(drinkSearch)
 
