@@ -123,10 +123,9 @@ let apiCallId = function (drinkId) {
         <div class="accordion-content" data-tab-content>
           <div class="media-object">
             <div class="media-object-section">
-              <img src= "${drinkImage}" alt="">
+              <img src= "${drinkImage}" class="drinkImage" alt="">
             </div>
             <div class="media-object-section">
-              <h4>${drinkName}</h4>
               <p>${drinkInstructions}</p>
               <ul>${ingList.html()}</ul>
             </div>
@@ -142,25 +141,18 @@ let searchGen = function () {
     let searchHTML = $(`<li class="accordion-item" data-accordion-item>
         <a href="#" class="accordion-title">Is your favorite drink missing? Search it Here!</a>
         <div class="accordion-content" data-tab-content>
-          <div class="media-object">
-            <div class="media-object-section">
-                <div>
-                    <label>
-                    <input type="checkbox" name="Non-Alcoholic" id="alcCheck">
-                    Non-Alcoholic
-                    </label>                  
-                </div>
-            </div>
-            <div class="media-object-section">
+          <div class="media-object searchDiv">
                 <form>
                     <label>
                     Search for drink:
-                    <input type="text" id="drinkSearch">
-                    <button type="submit" id='run'>Search Drink</button>
+                    <input type="text" id="drinkSearch"><button class="hollow button secondary"type="submit" id='run'>Search!</button>
                     </label>
+                    <label>
+                    <input type="checkbox" name="Non-Alcoholic" id="alcCheck">
+                    Non-Alcoholic
+                    </label>    
                 </form>
             </div>
-          </div>
         </div>`)
 
         allDrinksEl.append(searchHTML)
