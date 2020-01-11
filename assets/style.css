@@ -14,10 +14,6 @@ h2 {
     margin-top: 4%;
 }
 
-#allDrinks {
-    margin-top: 40%;
-}
-
 .hover:hover {
     transition: ease 0.5s;
     transform: translateY(-5px);
@@ -46,7 +42,6 @@ h2 {
     color: black;
     transition: 1s;
 }
-
 
 .light {
     color: white;
