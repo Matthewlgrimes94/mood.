@@ -46,14 +46,11 @@ $(document).ready(()=>{
     var widgetIframe = document.getElementById('scWidget');
     widget = SC.Widget(widgetIframe);
     widget.bind(SC.Widget.Events.PLAY, function() {
-        console.log("the music is playing, dance...");
         widget.getCurrentSound(function(currentSound) {
             song.text(currentSound.title);
         });
       });
 });
-
-
 
 function play(){  
     widget.play();
@@ -80,6 +77,3 @@ $(".era").on("click", function() {
     player.removeClass("hide");
     loadPlaylist(playlists[era]);
 });
-
-
-
