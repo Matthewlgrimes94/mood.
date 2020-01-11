@@ -127,5 +127,9 @@ label{
 .player-button:hover {
     cursor: pointer;
 }
+
+.links a {
+    color: black;
+}
 	
 
