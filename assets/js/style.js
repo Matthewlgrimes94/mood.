@@ -11,6 +11,11 @@ let era3Text = $('#802000');
 let era4Text = $('#present');
 let logo = $('#logo');
 let currentEra;
+
+let playerDiv = $("#player");
+let playerButtons = $(".player-button");
+let songNameDiv = $("#songName");
+
 erasEl.on('click', '.eraButton', function(){
     backgroundEl.removeClass(`${currentEra}`);
     if ($(this).attr('id') === '2040') {
@@ -50,6 +55,13 @@ function lightMode () {
     era4.addClass('eraIconLight');
     era4Text.addClass('light');
     era4Text.removeClass('dark');
+
+    playerButtons.removeClass('dark');
+    playerButtons.addClass('light');
+    songNameDiv.removeClass('dark');
+    songNameDiv.addClass('light');
+    playerDiv.removeClass('eraIconDark');
+    playerDiv.addClass('eraIconLight');
 }
 
 function darkMode () {
@@ -70,4 +82,11 @@ function darkMode () {
     era4.addClass('eraIconDark');
     era4Text.addClass('dark');
     era4Text.removeClass('light');
+
+    playerButtons.removeClass('light');
+    playerButtons.addClass('dark');
+    songNameDiv.removeClass('light');
+    songNameDiv.addClass('dark');
+    playerDiv.removeClass('eraIconLight');
+    playerDiv.addClass('eraIconDark');
 }
