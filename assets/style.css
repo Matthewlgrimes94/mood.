@@ -109,7 +109,14 @@ label{
 }
 
 #player {
-    width: 15%;
-    margin-top:5px;
+    width:97.5%;
+    margin-top:8px;
+    margin: 10px auto;
+    padding: 5px 3px 3px 3px;
 }
+
+.player-button:hover {
+    cursor: pointer;
+}
+	
 
