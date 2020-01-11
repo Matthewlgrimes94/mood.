@@ -22,3 +22,38 @@ h2 {
     border: solid 2px black;
     transition: 1s;
 }
+
+.drinkImage {
+    width: 250px
+}
+ 
+.accordion-title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    color: black !important
+}
+.media-object-section {
+    font-size: 1.5rem;
+    font-family: 'American Typewriter, serif';
+}
+.accordion {
+    width: 100%
+}
+label{
+    font-size: 1.5rem;
+    font-family: 'American Typewriter, serif'    
+}
+#alcCheck{
+    height: 25px;
+    width: 25px;
+}
+.searchDiv {
+    display: contents !important;
+    align-items: center;
+}
+#drinkSearch {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
