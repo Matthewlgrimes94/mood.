@@ -1,6 +1,6 @@
 // DOM
 let erasEl = $('.eras');
-let backgroundEl = $('#background-holder');
+let backgroundEl = $('body');
 let era1 = $('#1');
 let era2 = $('#2');
 let era3 = $('#3');
@@ -11,6 +11,7 @@ let era3Text = $('#802000');
 let era4Text = $('#present');
 let logo = $('#logo');
 let currentEra;
+let allDrinks = $('#allDrinks');
 
 let playerDiv = $("#player");
 let playerButtons = $(".player-button");
@@ -38,6 +39,10 @@ erasEl.on('click', '.eraButton', function(){
 });
 
 function lightMode () {
+    allDrinks.addClass('eraIconLight');
+    allDrinks.addClass('light');
+    allDrinks.removeClass('eraIconDark');
+    allDrinks.removeClass('dark');
     logo.attr('src','./images/moodwhite.png');
     era1.removeClass('eraIconDark');
     era1.addClass('eraIconLight');
@@ -65,6 +70,10 @@ function lightMode () {
 }
 
 function darkMode () {
+    allDrinks.addClass('eraIconDark');
+    allDrinks.addClass('dark');
+    allDrinks.removeClass('eraIconLight');
+    allDrinks.removeClass('light');
     logo.attr('src','./images/mood.png');
     era1.removeClass('eraIconLight');
     era1.addClass('eraIconDark');
