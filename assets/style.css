@@ -22,3 +22,8 @@ h2 {
     border: solid 2px black;
     transition: 1s;
 }
+
+#player {
+    width: 15%;
+    margin-top:5px;
+}

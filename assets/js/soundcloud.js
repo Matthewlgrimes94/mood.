@@ -19,7 +19,7 @@ var playlists = {
     now  : "https://soundcloud.com/user-589261654/sets/2010-2019bye"
 };
 
-
+var player = $("#player");
 var widget= null;
 
 var song = $("#songName");
@@ -35,7 +35,7 @@ function urlParams() {
 
 function displayWidget(){
     var iframe = $("#scWidget");
-  
+    
     iframe.attr("src", scWidgetUrl+"url=https://soundcloud.com/user-589261654/sets/2010-2019bye");
     
 }
@@ -77,6 +77,7 @@ function loadPlaylist(playlist) {
 
 $(".era").on("click", function() {
     var era = $(this).attr("data-era");
+    player.removeClass("hide");
     loadPlaylist(playlists[era]);
 });
 

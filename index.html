@@ -18,14 +18,22 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
       <div class="large-12 cell text-center">
+        <div id="player" class="float-right hide"> 
+          <iframe id="scWidget" allow="autoplay" style="display: none;"></iframe>
+          <div id="songName" class="text-center">I really long sentence to break the line</div>
+          <button class="player-button" onclick="prev()" ><i class="far fa-lg fa-arrow-alt-circle-left"></i></button>
+          <button class="player-button" onclick="play()" ><i class="far fa-lg fa-play-circle"></i></button>
+          <button class="player-button" onclick="pause()" ><i class="far fa-lg fa-pause-circle"></i></button>
+          <button class="player-button" onclick="next()" ><i class="far fa-lg fa-arrow-alt-circle-right"></i></button>
+       </div>   
         <img src="images/mood..jpg" class="logo"/> 
       </div>
     </div>
     <div class="grid-x grid-margin-x text-center eras">
-        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="2040">20's-40's</h2></div>
-        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="5070">50's-70's</h2></div>
-        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="802000">80's-2000</h2></div>
-        <div class="cell small-3 eraIcon"><h2 class="era eraButton" id="present">Present</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" data-era="1920" id="2040">20's-40's</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" data-era="1950" id="5070">50's-70's</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" data-era="1980" id="802000">80's-2000</h2></div>
+        <div class="cell small-3 eraIcon"><h2 class="era eraButton" data-era="now" id="present">Present</h2></div>
     </div>
     <ul class="accordion drink-content text-center" data-accordion data-allow-all-closed="true">
   </div>
@@ -41,8 +49,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
     <script src="assets/js/cocktailsApi.js"></script>
-    <!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
-    <!-- <script src="assets/js/soundcloud.js"></script> -->
+    <script src="https://kit.fontawesome.com/2bf7070f9f.js" crossorigin="anonymous"></script>
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+     <script src="assets/js/soundcloud.js"></script> 
 </body>
 
 </html>
