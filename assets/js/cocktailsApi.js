@@ -8,7 +8,7 @@ let runEl;
 let queryLengthEl = $('#queryLength')
 let allDrinksEl = $('#allDrinks')
 let eraButtonsEl = $('.eraButton')
-let modal = $('#modal');
+var modal = $('#modal');
 ////////////////
 // API Queries//
 ////////////////
@@ -70,7 +70,7 @@ let apiCall = function (query) {
         let id = response.drinks[0].idDrink
         //Call api with ids from above response
         apiCallId(id)
-    }).fail(function(){
+    }).fail(function(resp){
         modal.foundation('open');
     });
 }
